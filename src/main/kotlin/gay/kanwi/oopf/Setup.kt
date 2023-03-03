@@ -13,6 +13,8 @@ import kotlin.reflect.jvm.jvmName
  *
  * to use this class, add the following code to the main function:
  * ```
+ * import gay.kanwi.oopf.Setup
+ *
  * fun main(args: Array<String>) = Setup.runExercises(args)
  * ```
  * @since 1.0
@@ -85,7 +87,10 @@ object Setup {
             args.forEach {
                 classes.forEach { clazz ->
                     if (clazz!!::class.simpleName == it) {
+                        println("Running exercise: $it")
+                        println("=====================================")
                         (clazz as Exercise).run()
+                        println("=====================================")
                     }
                 }
             }

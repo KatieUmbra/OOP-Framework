@@ -10,6 +10,7 @@ plugins {
     id("maven-publish")
     id("signing")
     id("org.jetbrains.dokka") version "1.7.20"
+    id("com.github.johnrengelman.shadow") version "4.0.3"
 }
 
 group = "gay.kanwi"
@@ -23,6 +24,7 @@ repositories {
 }
 
 dependencies {
+    //implementation("com.github.jengelman.gradle.plugins:shadow:4.0.3")
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.8.10")
     implementation("io.github.classgraph:classgraph:4.8.154")
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
